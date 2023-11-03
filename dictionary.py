@@ -1,4 +1,4 @@
-dict = {'apple':200,'orange':300,'mango':400,'grapes':700}
+dict = {'apple': 200, 'orange': 300, 'mango': 400, 'grapes': 700}
 print(dict)
 print(dict['apple'])
 """print using for loop it shows key in default"""
@@ -22,6 +22,9 @@ dict['apple'] = 450
 print(dict)
 
 """delete value """
-del(dict['apple'])
+del (dict['apple'])
 print(dict)
 
+"""add value"""
+dict['gre_grapes'] = 500
+print(dict)
