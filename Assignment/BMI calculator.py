@@ -1,0 +1,5 @@
+weight = float(input('enter the weight in kg : '))
+height = float(input('enter the height in meter : '))
+BMI = round(weight / round((height ** 2), 2), 2)
+# y = "{:.2f}".format(BMI)
+print('your bmi is : ', BMI)
