@@ -9,9 +9,9 @@ x = pymysql.connect(host='localhost',
 cr = x.cursor()
 cr.execute('create table students(name varchar(20),age int)')
 x.close()
-
+--------------------------------------------------------------------------
 #insert values to this
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 import pymysql
 print("-------DATABASE CONNECTION--------")
 x = pymysql.connect(host='localhost',
@@ -24,3 +24,20 @@ x.commit()
 
 x.close()
 
+--------------------------------------------------------------------------
+#display data from tables
+--------------------------------------------------------------------------
+
+import pymysql
+print('---------DB CONNECTION---------')
+x=pymysql.connect(host='localhost',user='root',password='1234',database='school')
+cr=x.cursor()
+a='select * from teachers'
+cr.execute(a)
+res = cr.fetchall()
+for i in res:
+    print(i)
+x.commit()
+x.close()
+
+---------------------------------------------------------------------------
