@@ -1,4 +1,5 @@
 #db connection with create table
+---------------------------------------------------------------------------------
 import pymysql
 print("-------DATABASE CONNECTION--------")
 x = pymysql.connect(host='localhost',
@@ -8,4 +9,18 @@ x = pymysql.connect(host='localhost',
 cr = x.cursor()
 cr.execute('create table students(name varchar(20),age int)')
 x.close()
- 
+
+#insert values to this
+--------------------------------------------------------------------------------
+import pymysql
+print("-------DATABASE CONNECTION--------")
+x = pymysql.connect(host='localhost',
+                             user='root',
+                             password='1234',
+                             database='school')
+cr = x.cursor()
+cr.execute('insert into students values("vaishnav",23)')
+x.commit()
+
+x.close()
+
