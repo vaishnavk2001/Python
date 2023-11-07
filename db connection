@@ -1,0 +1,11 @@
+#db connection with create table
+import pymysql
+print("-------DATABASE CONNECTION--------")
+x = pymysql.connect(host='localhost',
+                             user='root',
+                             password='pass', #change pass
+                             database='school')
+cr = x.cursor()
+cr.execute('create table students(name varchar(20),age int)')
+x.close()
+ 
