@@ -1,8 +1,11 @@
 stack = []
 def push_fun():
-    ele = input('enter the element : ')
-    stack.append(ele)
-    print('inserted...')
+    if len(stack) == n:
+        print('stack is full..!')
+    else:
+        ele = input('enter the element : ')
+        stack.append(ele)
+        print('inserted...')
 
 
 def pop_fun():
@@ -15,7 +18,7 @@ def pop_fun():
 def display():
     print(stack)
 
-
+n = int(input("enter the size :"))
 while True:
     print("enter the choice : ")
     print(" 1.add \n 2.delete \n 3.exit \n 4.display")
